@@ -1,6 +1,8 @@
 
 import React from 'react';
-import Icon, { InfoCircleFilled } from '@ant-design/icons';
+import BarChart from './chartRevenueBranch';
+import PieChart from './chartServices';
+
 export default function Home() {
   return <div className="flex h-screen">
     {/* Sidebar */}
@@ -11,7 +13,7 @@ export default function Home() {
     </aside>
     <div className="flex-grow ml-28">
       {/* Header */}
-      <header className="bg-white fixed top-0 left-28 z-40 w-full">
+      <header className="bg-white top-0 left-28 z-40 w-full">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 h-20">
           <h2>DASHBOARD</h2>
           <div className="flex items-center h-full w-80 ">
@@ -27,10 +29,10 @@ export default function Home() {
         </div>
       </header>
       <main className="pt-24 px-2 py-2 h-full">
-        <div className="container mx-auto">
+        <div className="container mx-auto h-full">
           <div className="flex items-center w-full mx-auto mb-4 bg-white h-12 ">
             <h2>Doanh thu</h2>
-            <button className='fixed rounded-md h-8 w-8 right-10 border-slate-400 border-2 items-center'>
+            <button className='flex rounded-md h-8 w-8 right-10 border-slate-400 border-2 items-center'>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="size-6">
                 <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd" />
               </svg>
@@ -41,6 +43,8 @@ export default function Home() {
             <div style={{width: "33.33%"}}><h1>Thực thu</h1>200000</div>
             <div style={{width: "33.33%"}}><h1>Công nợ</h1>200000</div>
           </div>
+          <BarChart/>
+          <PieChart/>
         </div>
       </main>
     </div>
